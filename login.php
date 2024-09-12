@@ -463,6 +463,37 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+        document.addEventListener("DOMContentLoaded", function() {
+    // Toggle visibility of password fields
+    const showPasswordCheckbox = document.getElementById('showPassword');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password'); // Added
+
+    showPasswordCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            passwordInput.type = 'text';
+            confirmPasswordInput.type = 'text'; // Added
+        } else {
+            passwordInput.type = 'password';
+            confirmPasswordInput.type = 'password'; // Added
+        }
+    });
+
+    // Toggle visibility of registration password fields
+    const registerShowPasswordCheckbox = document.getElementById('register-showPassword');
+    const registerPasswordInput = document.getElementById('register-password');
+    const registerConfirmPasswordInput = document.getElementById('confirm-password'); // Added
+
+    registerShowPasswordCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            registerPasswordInput.type = 'text';
+            registerConfirmPasswordInput.type = 'text'; // Added
+        } else {
+            registerPasswordInput.type = 'password';
+            registerConfirmPasswordInput.type = 'password'; // Added
+        }
+    });
+});
 </script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
